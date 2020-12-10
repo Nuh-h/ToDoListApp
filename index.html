@@ -1,22 +1,44 @@
 <html>
   <head>
     <title> ToDo List</title>
-    <link rel="stylesheet" href="./style/main.css"/>
-    
+    <link rel="stylesheet" href="styles/main.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
   </head>
   <body>
     <div class="header">
-      <div></div>
+      <div> Welcome to the ToDoList App</div>
+	  <p> The idea is to allow adding/deleting of list-item, as well as editing. All of this has been learnt from twitter-clone!</p>
     </div>
     <div class="list-container">
       <div class="entry-field">
-        <input type="text"/>
-      </iv>
-      <djv class="list-items">
-        <div>First Item</div>
-        <div>Second Item</div>
-        <div> Third Item </div>
-      </djv>
+        <form class="new-item-form">
+			<input type="text" placeholder="Try adding 'meeting with best friend'" required></input>
+		</form>
+      </div>
+	  <p> <!--Item has been deleted...--></p>
+      <div class="list-items">
+        <div class="list-item">
+			<p>First Item</p>
+			<div class="buttons">
+				<div><a class="fa fa-edit" href="#"></a></div>
+				<div><a class="fa fa-trash" href="#"></a></div>
+			</div>
+		</div>
+        <div class="list-item">
+			<p>Second Item</p>
+			<div class="buttons">
+				<div><a class="fa fa-edit" href="#"></a></div>
+				<div><a class="fa fa-trash" href="#"></a></div>
+			</div>
+		</div>
+        <div class="list-item"> 
+			<p>Third Item</p>
+			<div class="buttons">
+				<div><a class="fa fa-edit" href="#"></a></div>
+				<div><a class="fa fa-trash" href="#"></a></div>
+			</div>
+		</div>
+      </div>
     </div>
   </body>
   <script src="app.js"></script>
