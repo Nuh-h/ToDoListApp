@@ -3,8 +3,9 @@ var items = document.querySelectorAll('.list-item');
 //adding event listener to buttons
 function delEventHandler(item){
 	const btns = item.querySelector('.buttons');
-    btns.lastElementChild.addEventListener('click', ()=>{
-        item.remove();
+    btns.lastElementChild.addEventListener('click', (e)=>{
+        e.preventDefault();
+		item.remove();
     });
 }
 items.forEach(item => {

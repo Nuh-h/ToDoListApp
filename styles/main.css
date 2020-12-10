@@ -14,6 +14,8 @@ body {
 .list-items{
 	background-color:black;
 	border: 2px solid white;
+    border-radius:7px;
+    overflow:hidden;
 }
 .list-item{
 	padding:10px;
@@ -24,8 +26,8 @@ body {
 
 }
 .list-item:hover{
-	color:#09f909;
-	background-color:#18183a;
+	color:#0fca0f;
+	background-color:#120e23;
 }
 .list-item p{
 	width:100%;
@@ -38,12 +40,14 @@ body > div {
 div {
 	font-size:15px;
 }
+
 .entry-field input {
 	width:100%;
 	border:0;
 	font-size:15px;
 	padding:5px;
 	margin:5px 0;
+	border-radius:7px;
 }
 .buttons{
 	width:20%;
@@ -58,7 +62,11 @@ div {
 .buttons a:hover{
 	color:#cca713;
 }
-
+.list-container > p{
+	background-color:green;
+	display:flex;
+	justify-content:center;
+}
 
 
 
