@@ -17,6 +17,11 @@ items.forEach(item => {
 function notify(message){
 	var itemAddedMessage = document.querySelector('.entry-field').nextElementSibling;
 	console.log(itemAddedMessage);
+	if(message==='deleted'){
+		itemAddedMessage.style.backgroundColor='red';
+	}else{
+		itemAddedMessage.style.backgroundColor='green';
+	};
 	itemAddedMessage.innerText = 'item '+message+' successfully!';
 	setTimeout(()=>{
 		itemAddedMessage.innerText ='';
