@@ -6,12 +6,22 @@ function delEventHandler(item){
     btns.lastElementChild.addEventListener('click', (e)=>{
         e.preventDefault();
 		item.remove();
+		notify('deleted');
     });
+	
 }
 items.forEach(item => {
     delEventHandler(item);
 });
-
+//notify item deleted/added
+function notify(message){
+	var itemAddedMessage = document.querySelector('.entry-field').nextElementSibling;
+	console.log(itemAddedMessage);
+	itemAddedMessage.innerText = 'item '+message+' successfully!';
+	setTimeout(()=>{
+		itemAddedMessage.innerText ='';
+	},3000);
+}
 //enabling addition
 function submitted(){
 	const entryFieldForm = document.getElementsByTagName('form')[0]
@@ -24,12 +34,7 @@ function submitted(){
     var listItems = document.querySelector('.list-items');
     listItems.insertBefore(newItem,listItems.firstElementChild);
     entryFieldForm.reset();
-	var itemAddedMessage = document.querySelector('.entry-field').nextElementSibling;
-	console.log(itemAddedMessage);
-	itemAddedMessage.innerText ='item added successfully!';
-	setTimeout(()=>{
-		itemAddedMessage.innerText ='';
-	},3000);
+	notify('added');
 };
 var newItemForm = document.querySelector('.new-item-form');
 newItemForm.addEventListener('submit',submitted);
