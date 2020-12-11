@@ -10,6 +10,7 @@ body {
 }
 .header{
 	background-color: #0a1e2f;
+	padding:0 10px;
 }
 .header,.list-container{
 	width:45%;
