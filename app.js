@@ -52,7 +52,8 @@ newItemForm.addEventListener('submit',submitted);
 });	 */
 function setFocus(item){
 	var editBtn = item.querySelector('.buttons');
-    editBtn.firstElementChild.addEventListener('click',()=>{
+    editBtn.firstElementChild.addEventListener('click',(e)=>{
+	    	e.preventDefault();
 		var editElem = item.firstElementChild;
 		editElem.contentEditable="true";
 		editElem.focus();
